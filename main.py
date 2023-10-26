@@ -1,16 +1,32 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+#Carson Hernandez
+from Encoder import encoder
+
+def menu():
+
+    Continue = True
+
+    while Continue == True:
+
+        print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n ")
+
+        choice = int(input("Please enter an option: "))
+
+        if choice == 1:
+
+            password_nonencoded = int(input("Please enter your password to encode: "))
+
+            print("Your password has been encoded and stored!\n ")
+
+            grape_fruit = encoder(password_nonencoded)
+
+        if choice == 2:
+
+            #CALL DECODER HERE THEN INPUT THE VALUE IN F STRING:)
+
+            print(f"The encoded password is {grape_fruit}, and the original password is PUT DECODER HERE\n ")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    menu()
